@@ -84,7 +84,7 @@ describe('Extend', function () {
     });
   });
 
-  it('it should do nothing to the image with an empty options object passed', function (done) {
+  it('do nothing to the image with an empty options object', function (done) {
     sharp(fixtures.inputPng)
       .extend({})
       .toBuffer(function (err, data, info) {
