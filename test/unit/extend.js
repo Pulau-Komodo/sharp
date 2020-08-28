@@ -85,13 +85,13 @@ describe('Extend', function () {
   });
 
   it('it should do nothing to the image with an empty options object passed', function (done) {
-    sharp(fixtures.inputJpg)
+    sharp(fixtures.inputPng)
       .extend({})
       .toBuffer(function (err, data, info) {
         if (err) throw err;
-        assert.strictEqual(2725, info.width);
-        assert.strictEqual(2225, info.height);
-        fixtures.assertSimilar(fixtures.expected('2569067123_aca715a2ee_o.jpg'), data, done);
+        assert.strictEqual(2809, info.width);
+        assert.strictEqual(2074, info.height);
+        fixtures.assertSimilar(fixtures.expected('50020484-00001.png'), data, done);
       });
   });
 
